@@ -15,7 +15,11 @@ jobs:
 
       - name: Run Application
         run: python app.py
-
+  tests:
+      needs: build
+      runs-on: ubuntu-latest
+      
+    steps:
       - name: Run tests
         run: python test_app.py
 
