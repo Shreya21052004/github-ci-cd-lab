@@ -13,8 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Run build
+      - name: Run Application
         run: python app.py
+
+      - name: Run tests
+        run: python test_app.py
 
       - name: Show date
         run: date
