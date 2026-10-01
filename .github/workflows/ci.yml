@@ -17,7 +17,7 @@ jobs:
         run: python app.py
 
       - name: Build Docker image
-        run: docker build -t my-ci-app
+        run: docker build -t my-ci-app .
   tests:
     needs: build
     runs-on: ubuntu-latest
